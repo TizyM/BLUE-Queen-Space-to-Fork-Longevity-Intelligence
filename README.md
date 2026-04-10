@@ -38,3 +38,5 @@ Blue Queen is an evolution of research conducted within:
 ## ✉️ Contact
 **Scientific Coordinator:** Prof. Tiziana Mori  
 📧 [tiziana.mori@gmail.com](mailto:tiziana.mori@gmail.com)
+
+© 2026 BLUE Queen Project - All Rights Reserved. This document contains proprietary and confidential information. Unauthorized use, disclosure, or reproduction is strictly prohibited. Project led by Prof. Tiziana Mori (Ph.D.)
