@@ -8,44 +8,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root { 
+      --eit-blue: #003366; 
+      --eit-green: #2d8a3c;
       --royal-gold: #b89112; 
-      --ewa-green: #2d8a3c;
-      --off-white: #f8fafc;
-      --glass-bg: rgba(255, 255, 255, 0.7);
+      --soft-cream: #f8faf9;
     }
-    body { background-color: var(--off-white); color: #1e293b; font-family: 'Syne', sans-serif; }
+    body { background-color: var(--soft-cream); color: var(--eit-blue); font-family: 'Syne', sans-serif; }
     .font-orbit { font-family: 'Orbitron', sans-serif; }
-    .glow-gold { color: var(--royal-gold); text-shadow: 0 0 10px rgba(184,145,18,0.2); }
     
-    /* Card con Ombre Profonde per Massima Visibilità */
+    .woman-bg {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90" opacity="0.03">♀</text></svg>');
+      background-repeat: no-repeat; background-position: center; background-attachment: fixed;
+    }
+
     .glass-card { 
-      background: white; 
-      border: 1px solid rgba(226, 232, 240, 0.8); 
-      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-      border-radius: 24px;
-      transition: all 0.3s ease;
-    }
-    .glass-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
-
-    /* Card CEO Speciale */
-    .ceo-card { 
-      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-      border: 2px solid var(--royal-gold);
-      box-shadow: 0 25px 50px -12px rgba(184, 145, 18, 0.15);
+      background: white; border: 1px solid rgba(0, 51, 102, 0.1); 
+      box-shadow: 0 15px 35px rgba(0, 51, 102, 0.05); border-radius: 24px;
     }
 
-    .btn-lang { font-size: 0.65rem; border: 1px solid #e2e8f0; padding: 5px 12px; border-radius: 99px; font-family: 'Orbitron'; color: #64748b; background: white; }
-    .btn-lang.active { background: var(--ewa-green); color: white; border-color: var(--ewa-green); font-weight: bold; }
+    .ceo-card { border: 2px solid var(--royal-gold); background: linear-gradient(135deg, #ffffff 0%, #fefcf0 100%); }
+    .btn-lang { font-size: 0.7rem; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 99px; font-family: 'Orbitron'; background: white; transition: 0.3s; }
+    .btn-lang.active { background: var(--eit-green); color: white; border-color: var(--eit-green); }
     .hidden { display: none; }
-    
-    .partner-label { font-size: 1.2rem; font-weight: 900; letter-spacing: 0.2em; color: #cbd5e1; transition: 0.3s; }
-    .partner-label:hover { color: var(--royal-gold); }
+    .partner-label { color: #cbd5e1; font-family: 'Orbitron'; font-weight: 800; transition: 0.3s; }
+    .partner-label:hover { color: var(--eit-green); }
   </style>
 </head>
-<body>
+<body class="woman-bg">
 
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-8 py-5 flex justify-between items-center">
-    <div class="font-orbit font-bold text-emerald-800 tracking-tighter text-xl">BLUE QUEEN</div>
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-8 py-5 flex justify-between items-center">
+    <div class="font-orbit font-bold text-[#003366] tracking-widest text-xl uppercase">Blue Queen</div>
     <div class="flex gap-2">
       <button onclick="setLang('en')" id="en-btn" class="btn-lang active">EN</button>
       <button onclick="setLang('it')" id="it-btn" class="btn-lang">IT</button>
@@ -54,98 +46,131 @@
     </div>
   </nav>
 
-  <header class="py-24 px-6 text-center max-w-5xl mx-auto">
+  <header class="py-20 px-6 text-center max-w-5xl mx-auto">
     <h1 class="font-orbit text-5xl sm:text-7xl font-black mb-8 leading-tight uppercase">
-      <span class="lang-en text-slate-900">The Future of <span class="glow-gold italic">Longevity</span> is Female</span>
-      <span class="lang-it hidden text-slate-900">Il Futuro della <span class="glow-gold italic">Longevità</span> è Donna</span>
-      <span class="lang-fr hidden text-slate-900">L'avenir de la <span class="glow-gold italic">Longévité</span> est Féminin</span>
-      <span class="lang-es hidden text-slate-900">El futuro de la <span class="glow-gold italic">Longevidad</span> ès Mujer</span>
+      <span class="lang-en text-slate-900">The Future of <span class="text-amber-600 italic">Longevity</span> is Female</span>
+      <span class="lang-it hidden text-slate-900">Il Futuro della <span class="text-amber-600 italic">Longevità</span> è Donna</span>
+      <span class="lang-fr hidden text-slate-900">L'avenir de la <span class="text-amber-600 italic">Longévité</span> est Féminin</span>
+      <span class="lang-es hidden text-slate-900">El futuro de la <span class="text-amber-600 italic">Longevidad</span> es Mujer</span>
     </h1>
-    <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium">
-      <span class="lang-en">Validating Blue Zone female-led agrifood through Copernicus Sentinel-2.</span>
-      <span class="lang-it hidden">Validiamo l'agrifood femminile delle Blue Zone tramite i satelliti Copernicus.</span>
-    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="border border-sky-500/30 text-sky-600 text-[10px] font-orbit px-4 py-1 rounded tracking-widest bg-sky-50">SENTINEL-2 DATA</span>
+      <span class="border border-green-500/30 text-green-600 text-[10px] font-orbit px-4 py-1 rounded tracking-widest bg-green-50">BLUE ZONE CERTIFIED</span>
+    </div>
   </header>
 
-  <section class="py-12 px-6 max-w-5xl mx-auto">
-    <div class="glass-card ceo-card p-12 text-center relative overflow-hidden">
-      <div class="absolute -top-10 -right-10 text-amber-500/5 text-9xl font-bold">♀</div>
-      <p class="font-orbit text-xs text-amber-600 mb-4 uppercase tracking-[0.5em]">Ideatrice, CEO & Startupper</p>
-      <h2 class="font-orbit text-4xl md:text-5xl font-black text-slate-900 mb-6">Prof. Tiziana Mori (Ph.D)</h2>
-      <p class="text-xl italic text-slate-600 leading-relaxed max-w-3xl mx-auto">
-        <span class="lang-en">"Scaling TAPTA's legacy into a high-precision ecosystem for female entrepreneurship."</span>
-        <span class="lang-it hidden">"Trasformo l'eredità di TAPTA in un ecosistema di alta precisione per l'imprenditoria femminile."</span>
+  <section class="py-10 px-6 max-w-5xl mx-auto">
+    <div class="glass-card ceo-card p-12 text-center relative shadow-2xl">
+      <div class="absolute top-4 right-6 text-4xl text-amber-500 opacity-20 font-bold">♀</div>
+      <p class="font-orbit text-[10px] text-amber-600 mb-4 uppercase tracking-[0.5em]">Ideatrice, CEO & Startupper</p>
+      <h2 class="font-orbit text-4xl md:text-5xl font-black mb-6">Prof. Tiziana Mori (Ph.D)</h2>
+      <p class="text-xl italic text-slate-700 leading-relaxed max-w-3xl mx-auto">
+        <span class="lang-en">"Transforming satellite precision into economic sovereignty for women-led agriculture."</span>
+        <span class="lang-it hidden">"Trasformo la precisione satellitare in sovranità economica per l'agricoltura femminile."</span>
+        <span class="lang-fr hidden">"Transformer la précision satellite en souveraineté économique pour l'agriculture féminine."</span>
+        <span class="lang-es hidden">"Transformando la precisión satelital en soberanía económica para la agricultura femenina."</span>
       </p>
     </div>
   </section>
 
   <section class="py-12 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="glass-card p-10 border-t-4 border-emerald-500">
-      <h3 class="font-orbit text-emerald-600 text-sm mb-4 uppercase tracking-widest">Mission</h3>
-      <p class="text-slate-600 leading-relaxed italic text-sm">
-        <span class="lang-en">Empowering female-led associations by certifying nutritional excellence via satellite.</span>
-        <span class="lang-it hidden">Potenziare le associazioni femminili certificando l'eccellenza nutrizionale via satellite.</span>
-      </p>
+    <div class="glass-card p-10 border-l-8 border-emerald-600">
+      <h3 class="font-orbit text-emerald-700 text-sm mb-4 uppercase tracking-widest">Mission</h3>
+      <p class="lang-en text-sm italic">Empowering female-led associations by certifying nutritional excellence via satellite technology.</p>
+      <p class="lang-it hidden text-sm italic">Potenziare le associazioni femminili certificando l'eccellenza nutrizionale via tecnologia satellitare.</p>
+      <p class="lang-fr hidden text-sm italic">Autonomiser les associations féminines en certifiant l'excellence nutritionnelle par satellite.</p>
+      <p class="lang-es hidden text-sm italic">Potenciar las asociaciones femeninas certificando la excelencia nutricional mediante tecnología satelital.</p>
     </div>
-    <div class="glass-card p-10 border-t-4 border-amber-500">
-      <h3 class="font-orbit text-amber-600 text-sm mb-4 uppercase tracking-widest">Vision</h3>
-      <p class="text-slate-600 leading-relaxed italic text-sm">
-        <span class="lang-en">Setting the gold standard for validated longevity food systems across Europe.</span>
-        <span class="lang-it hidden">Diventare lo standard d'oro per i sistemi alimentari di longevità in Europa.</span>
-      </p>
+    <div class="glass-card p-10 border-l-8 border-[#003366]">
+      <h3 class="font-orbit text-[#003366] text-sm mb-4 uppercase tracking-widest">Vision</h3>
+      <p class="lang-en text-sm italic">Becoming the gold standard for validated longevity food systems in the heart of Europe.</p>
+      <p class="lang-it hidden text-sm italic">Diventare lo standard d'oro per i sistemi alimentari di longevità validati nel cuore dell'Europa.</p>
+      <p class="lang-fr hidden text-sm italic">Devenir la référence pour i sistemi alimentari di longevità validés au cœur de l'Europe.</p>
+      <p class="lang-es hidden text-sm italic">Convertirse en el estándar de oro para los sistemas alimentarios de longevidad validados en Europa.</p>
     </div>
   </section>
 
-  <section class="py-16 px-6 max-w-6xl mx-auto text-center">
-    <h2 class="font-orbit text-xs text-slate-400 tracking-[0.4em] uppercase mb-12 italic">Where we work</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="glass-card p-8 bg-sky-50/30">
-        <h4 class="font-orbit text-sky-700 text-2xl mb-2">Sardegna</h4>
-        <p class="text-[10px] text-slate-400 uppercase tracking-widest mb-4">Alghero • Ogliastra • Sud</p>
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="font-orbit text-center text-xs tracking-[0.4em] text-slate-400 mb-12 uppercase italic">Ecosystem & Territories</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+      <div class="glass-card p-8 bg-sky-50/50 border-sky-100">
+        <h4 class="font-orbit text-2xl text-sky-700 mb-2">SARDEGNA</h4>
+        <p class="text-[10px] font-orbit text-slate-400 mb-4 uppercase tracking-widest">Alghero • Ogliastra • Sud Sardegna</p>
+        <p class="text-sm text-slate-600 lang-it">Hub per la validazione delle colture Blue Zone.</p>
+        <p class="text-sm text-slate-600 lang-en hidden">Hub for Blue Zone crop validation.</p>
       </div>
-      <div class="glass-card p-8 bg-amber-50/30">
-        <h4 class="font-orbit text-amber-700 text-2xl mb-2">Toscana</h4>
-        <p class="text-[10px] text-slate-400 uppercase tracking-widest mb-4">Val di Merse</p>
+      <div class="glass-card p-8 bg-amber-50/50 border-amber-100">
+        <h4 class="font-orbit text-2xl text-amber-700 mb-2">TOSCANA</h4>
+        <p class="text-[10px] font-orbit text-slate-400 mb-4 uppercase tracking-widest">Val di Merse</p>
+        <p class="text-sm text-slate-600 lang-it">Espansione agronomia sostenibile.</p>
+        <p class="text-sm text-slate-600 lang-en hidden">Sustainable agronomy expansion.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-12 px-6 max-w-6xl mx-auto">
-    <div class="glass-card p-8 text-center bg-white">
-      <h3 class="font-orbit text-xs text-slate-400 mb-8 uppercase tracking-widest">Satellite-to-Fork Flow</h3>
-      <img src="infografica-blue-queen.png" alt="Process Flow" class="w-full max-w-4xl mx-auto rounded-xl">
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="glass-card p-10 bg-white border-2 border-[#003366]/5">
+      <h3 class="font-orbit text-center text-xs tracking-widest mb-10 text-slate-400 uppercase">Operational Tech Flow</h3>
+      <img src="https://github.com/TizyM/BLUE-Queen-Space-to-Fork-Longevity-Intelligence/blob/main/funzionamento%20Blue%20Queen%20project.png?raw=true" alt="Grafico Claude" class="w-full h-auto rounded-xl shadow-lg mb-10 border border-slate-100">
+      <div class="text-center font-medium text-slate-600 border-t border-slate-100 pt-8 px-4">
+        <p class="lang-en text-lg">Our proprietary system bridges Copernicus satellite intelligence with localized soil sensors to certify every harvest's nutritional density.</p>
+        <p class="lang-it hidden text-lg">Il nostro sistema proprietario unisce l'intelligence satellitare Copernicus ai sensori locali per certificare la densità nutrizionale di ogni raccolto.</p>
+        <p class="lang-fr hidden text-lg">Notre système exclusif relie l'intelligence satellitaire Copernicus aux capteurs de sol locaux pour certifier la densité nutritionnelle.</p>
+        <p class="lang-es hidden text-lg">Nuestro sistema exclusivo une la inteligencia satelital Copernicus con sensores locales para certificar la densidad nutricional.</p>
+      </div>
     </div>
   </section>
 
-  <section class="py-20 px-6 text-center">
+  <section class="py-20 text-center bg-slate-50/50">
     <h3 class="font-orbit text-[10px] text-slate-400 tracking-[0.5em] uppercase mb-12">Strategic Partners</h3>
-    <div class="flex flex-wrap justify-center gap-16 items-center">
-      <div class="partner-label font-orbit">ARKA</div>
-      <div class="partner-label font-orbit">MOVERE</div>
-      <div class="partner-label font-orbit">TAPTA</div>
+    <div class="flex flex-wrap justify-center gap-16 text-2xl">
+      <span class="partner-label">ARKA</span>
+      <span class="partner-label">MOVERE</span>
+      <span class="partner-label">TAPTA</span>
     </div>
   </section>
 
-  <section class="py-20 px-6 bg-slate-50/50 border-t border-slate-100">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="glass-card p-8 text-center bg-white">
-        <h4 class="font-orbit text-sm">Vincenza Silanos</h4>
-        <p class="text-[9px] text-slate-400 uppercase mt-2">Agrifood Tech Lead</p>
+  <section class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-100">
+    <h2 class="font-orbit text-center text-xs tracking-widest text-slate-400 uppercase mb-12 italic">Core Support Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass-card p-6 text-center">
+        <h4 class="font-orbit text-sm font-bold">Vincenza Silanos</h4>
+        <p class="text-[9px] text-emerald-600 font-orbit uppercase mt-2">Agrifood Tech Lead</p>
       </div>
-      <div class="glass-card p-8 text-center bg-white">
-        <h4 class="font-orbit text-sm">Leonardo Tronci</h4>
-        <p class="text-[9px] text-slate-400 uppercase mt-2">Space Intelligence</p>
+      <div class="glass-card p-6 text-center">
+        <h4 class="font-orbit text-sm font-bold">Leonardo Tronci</h4>
+        <p class="text-[9px] text-sky-600 font-orbit uppercase mt-2">Space Intelligence</p>
       </div>
-      <div class="glass-card p-8 text-center bg-white">
-        <h4 class="font-orbit text-sm">Dr. M. Tronci</h4>
-        <p class="text-[9px] text-slate-400 uppercase mt-2">Legal & GDPR</p>
+      <div class="glass-card p-6 text-center">
+        <h4 class="font-orbit text-sm font-bold">Dr. M. Tronci</h4>
+        <p class="text-[9px] text-slate-400 font-orbit uppercase mt-2">Legal & GDPR</p>
       </div>
     </div>
   </section>
 
   <section class="py-24 px-6 text-center">
-    <div class="inline-flex items-center gap-4 border-2 border-emerald-600 px-8 py-4 rounded-full mb-12 bg-white shadow-lg">
+    <div class="inline-flex items-center gap-4 border-2 border-emerald-600 px-8 py-4 rounded-full mb-12 bg-white shadow-xl">
       <span class="text-amber-500 font-bold text-xl">♀</span>
-      <span class="font-orbit text-[10px] text-emerald-700 tracking-[0.3em] uppercase font-bold">Alumni EWA EIT Food 2023 | FQTS 2026</span>
+      <span class="font-orbit text-[10px] text-emerald-700 tracking-[0.3em] uppercase font-bold">EWA Alumni 2023 | FQTS 2026 Associate Growth</span>
     </div>
-    <h3 class="font-orbit text-3xl mb-8
+    <div class="mb-10">
+       <a href="mailto:tiziana.mori@gmail.com" class="bg-slate-900 text-white font-orbit px-16 py-5 rounded-full hover:bg-emerald-700 transition-all text-sm tracking-[0.3em] shadow-2xl block sm:inline-block">
+        CONTACT THE CEO
+       </a>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-[9px] font-orbit text-slate-300 tracking-[0.5em] uppercase border-t border-slate-100">
+    Blue Queen — Space to Fork Longevity Ecosystem © 2026
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[class*="lang-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('.btn-lang').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(lang + '-btn').classList.add('active');
+    }
+  </script>
+</body>
+</html>
