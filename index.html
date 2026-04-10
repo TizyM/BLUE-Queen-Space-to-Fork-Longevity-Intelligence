@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLUE Queen — Space for Longevity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root { --blue: #0a192f; --gold: #fbbf24; --sky: #38bdf8; }
+    body { background-color: var(--blue); color: #e2e8f0; font-family: 'Syne', sans-serif; scroll-behavior: smooth; }
+    .font-orbit { font-family: 'Orbitron', sans-serif; }
+    .glow-gold { color: var(--gold); text-shadow: 0 0 15px rgba(251,191,36,0.5); }
+    .nav-glass { background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .btn-lang { font-size: 0.7rem; border: 1px solid rgba(56,189,248,0.3); padding: 5px 10px; border-radius: 6px; transition: 0.3s; font-family: 'Orbitron'; }
+    .btn-lang.active { background: var(--sky); color: var(--blue); border-color: var(--sky); font-weight: bold; }
+    .card-team { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; transition: 0.4s; }
+    .card-team:hover { border-color: var(--gold); transform: translateY(-5px); background: rgba(255,255,255,0.05); }
+    .partner-logo { filter: grayscale(1) brightness(1.5); transition: 0.4s; opacity: 0.7; }
+    .partner-logo:hover { filter: grayscale(0) brightness(1); opacity: 1; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-glass sticky top-0 z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="font-orbit font-bold tracking-[0.2em] text-sky-400 text-lg">BLUE <span class="text-white">QUEEN</span></div>
+      <div class="flex flex-wrap gap-2 justify-end">
+        <button onclick="setLang('en')" id="en-btn" class="btn-lang active">EN</button>
+        <button onclick="setLang('it')" id="it-btn" class="btn-lang">IT</button>
+        <button onclick="setLang('fr')" id="fr-btn" class="btn-lang">FR</button>
+        <button onclick="setLang('es')" id="es-btn" class="btn-lang">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-24 px-6 text-center max-w-5xl mx-auto">
+    <div class="inline-block border border-amber-500/40 text-amber-500 text-[10px] font-orbit px-5 py-2 rounded-full mb-8 tracking-[0.3em] uppercase">EWA 2026 · Global Excellence</div>
+    <h1 class="font-orbit text-4xl sm:text-7xl font-black mb-8 leading-tight uppercase">
+      <span class="lang-en">Space-Tech for Longevity</span>
+      <span class="lang-it hidden">Tech Spaziale per la Longevità</span>
+      <span class="lang-fr hidden">Tech Spatiale pour la Longévité</span>
+      <span class="lang-es hidden">Tecnología Espacial para la Longevidad</span>
+    </h1>
+    <p class="text-blue-200/70 text-lg sm:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+      <span class="lang-en">Empowering female-led agrifood entrepreneurs in Sardinia and beyond through Copernicus satellite intelligence.</span>
+      <span class="lang-it hidden">Potenziare l'imprenditoria agricola femminile in Sardegna e nel mondo tramite i satelliti Copernicus.</span>
+      <span class="lang-fr hidden">Autonomiser l'agroalimentaire féminin en Sardaigne grâce à l'intelligence satellitaire.</span>
+      <span class="lang-es hidden">Empoderando a las mujeres del sector agroalimentario en Cerdeña mediante inteligencia satelital.</span>
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:tiziana.mori@gmail.com" class="bg-amber-500 text-blue-900 font-orbit font-bold px-10 py-4 rounded-full hover:bg-amber-400 transition-all text-sm tracking-widest">JOIN THE MISSION</a>
+    </div>
+  </header>
+
+  <section class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="font-orbit text-center text-xs tracking-[0.5em] text-sky-400 uppercase mb-16 italic">Core Leadership Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="card-team p-8 border-amber-500/20">
+        <h3 class="font-orbit text-amber-400 text-lg mb-1">Prof. Tiziana Mori</h3>
+        <p class="text-[10px] font-orbit text-white/40 mb-4 uppercase tracking-widest">Founder & Scientific Lead</p>
+        <p class="text-sm text-white/60 leading-relaxed italic">
+          <span class="lang-en">Expert in sustainable agrifood and bio-molecular validation for Blue Zones.</span>
+          <span class="lang-it hidden">Esperta in agrifood sostenibile e validazione bio-molecolare per le Blue Zone.</span>
+          <span class="lang-fr hidden">Experte en agroalimentaire durable et validation pour les Zones Bleues.</span>
+          <span class="lang-es hidden">Experta en agroalimentación sostenible y validación para las Zonas Azules.</span>
+        </p>
+      </div>
+
+      <div class="card-team p-8 border-sky-500/20">
+        <h3 class="font-orbit text-sky-400 text-lg mb-1">Leonardo Tronci</h3>
+        <p class="text-[10px] font-orbit text-white/40 mb-4 uppercase tracking-widest">CTO & Space Intelligence</p>
+        <p class="text-sm text-white/60 leading-relaxed italic">
+          <span class="lang-en">AI & Satellite Data Specialist. Global L3 Award Winner.</span>
+          <span class="lang-it hidden">Specialista AI e Dati Satellitari. Vincitore Global L3 Award.</span>
+          <span class="lang-fr hidden">Spécialiste IA et données satellitaires. Lauréat du Global L3 Award.</span>
+          <span class="lang-es hidden">Especialista en IA y datos satelitales. Ganador del Global L3 Award.</span>
+        </p>
+      </div>
+
+      <div class="card-team p-8 border-white/10">
+        <h3 class="font-orbit text-white text-lg mb-1">Dr. Massimiliano Tronci</h3>
+        <p class="text-[10px] font-orbit text-white/40 mb-4 uppercase tracking-widest">Compliance & Strategy</p>
+        <p class="text-sm text-white/60 leading-relaxed italic">
+          <span class="lang-en">Specialist in EU Data Protection, GDPR and Regulatory Compliance.</span>
+          <span class="lang-it hidden">Specialista in Protezione Dati UE, GDPR e conformità normativa.</span>
+          <span class="lang-fr hidden">Spécialiste en protection des données de l'UE et RGPD.</span>
+          <span class="lang-es hidden">Especialista en Protección de Datos de la UE y RGPD.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 bg-black/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-orbit text-center text-[10px] tracking-[0.5em] text-white/30 uppercase mb-12">Institutional Partners</h2>
+      <div class="flex flex-wrap justify-center items-center gap-12 sm:gap-20">
+        <div class="text-center">
+          <p class="font-orbit text-white font-bold tracking-widest">TAPTA</p>
+          <p class="text-[8px] text-white/40 uppercase">Research Hub</p>
+        </div>
+        <div class="text-center">
+          <p class="font-orbit text-white font-bold tracking-widest uppercase">Arka Eventi</p>
+          <p class="text-[8px] text-white/40 uppercase">Cultural Engagement</p>
+        </div>
+        <div class="text-center">
+          <p class="font-orbit text-white font-bold tracking-widest uppercase">Movere In Salus</p>
+          <p class="text-[8px] text-white/40 uppercase">Health Nexus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-16 text-center border-t border-white/5">
+    <p class="text-[9px] font-orbit text-white/20 tracking-[0.5em] mb-4">
+      © 2026 BLUE QUEEN — SPACE FOR LONGEVITY | SARDINIA BLUE ZONE
+    </p>
+    <p class="text-[8px] text-white/10">tiziana.mori@gmail.com</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      // Nascondi tutti i testi multilingua
+      document.querySelectorAll('.lang-en, .lang-it, .lang-fr, .lang-es').forEach(el => el.classList.add('hidden'));
+      // Mostra solo quelli della lingua selezionata
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
+      // Gestione pulsanti attivi
+      document.querySelectorAll('.btn-lang').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(lang + '-btn').classList.add('active');
+    }
+  </script>
+</body>
+</html>
