@@ -13,6 +13,14 @@ is a satellite-driven platform designed to empower female agrifood entrepreneurs
 ## 🚀 The Vision
 Inspired by global Longevity Hotspots (Blue Zones), BLUE Queen provides a scientific "seal of excellence" for female-led farms. We don't just track crops; we validate the **purity, stress-levels, and nutritional potential** of the food from space.
 
+## 🗺️ Validated Territories & Pilot Hubs
+We focus on high-potential longevity hotspots, combining tourism appeal with agricultural excellence:
+
+* **Sardegna (Blue Zone Core):** * **Alghero:** Our primary hub for coastal longevity validation and international visibility.
+    * **Ogliastra & Sud Sardegna:** Focus on inland biodiversity and ancient crop resilience.
+* **Toscana:**
+    * **Val di Merse:** Expansion site for sustainable agronomy and high-density nutritional systems.
+
 ## 🛠 Tech Stack
 - **Satellite Intelligence:** Copernicus Sentinel-2 (Multispectral) & Sentinel-1 (SAR).
 - **Core Engine:** Python-based NDVI & Moisture stress analysis.
